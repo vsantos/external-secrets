@@ -68,8 +68,7 @@ build.publish: image generate $(SOURCES)
 		/bin/bash -c "cd /repo && $(MIKE) deploy --update-aliases -p -F hack/api-docs/mkdocs.yml $(DOCS_VERSION) $(DOCS_ALIAS);"
 .PHONY: generate
 generate:
-	./generate.sh $(SRCDIR)/en/api/spec.md
-	cp $(SRCDIR)/en/api/spec.md $(SRCDIR)/pt-BR/api/spec.md
+	./generate.sh $(SRCDIR)/snippets/api/spec.md
 
 .PHONY: clean
 clean:
