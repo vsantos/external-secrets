@@ -25,16 +25,53 @@ plugins:
   - macros:
       include_dir: docs/snippets
   - i18n:
-      docs_structure: suffix
+      docs_structure: folder
       languages:
         - locale: en
           default: true
           name: English
           build: true
         - locale: pt-BR
-          fallback_to_default: true
           name: Portuguese (Brazilian)
           build: true
+          nav_translations:
+            Introduction: Introdução
+            Getting Started: Como começar
+            FAQ: Perguntas frequentes
+            Stability and Support: Estabilidade e suporte
+            Deprecation Policy: Política de depreciação
+            Components: Componentes
+            Core Resources: Recursos principais
+            Reference Docs: Documentação de referência
+            API specification: Especificação da API
+            Controller Options: Opções do controller
+            Metrics: Métricas
+            Guides: Guias
+            Introduction: Introdução
+            Extract structured data: Extrair dados estruturados
+            Find Secrets by Name or Metadata: Encontrar secrets por nome ou metadata
+            Rewriting Keys: Reescrevendo chaves
+            Advanced Templating: Manipulando templates de forma avançada
+            Kubernetes Secret Types: Tipos de Kubernetes Secrets
+            "Lifecycle: ownership & deletion": "Ciclo de vida: ownership e deleção"
+            Decoding Strategies: Estratégias de decoding
+            Controller Classes: Classes do controller
+            Operations: Operações
+            Security Best Practices: Boas práticas de segurança
+            Threat Model: Modelos de ameaça
+            Upgrading to v1beta1: Atualizando para o v1beta1
+            Using Latest Image: Usando a imagem 'latest'
+            Disable Cluster Features: Desabilitar as funcionalidades à nível 'Cluster'
+            Provider: Provedores
+            Examples: Exemplos
+            Community: Comunidade
+            Contributing: Contribuindo
+            Developer guide: Guia do desenvolvedor
+            Contributing Process: Processo de contribuição
+            Release Process: Processo de release
+            Code of Conduct: Código de conduta
+            External Resources: Recursos externos
+
 copyright: |
   &copy; 2024 The external-secrets Authors.<br/>
   &copy; 2024 The Linux Foundation. All rights reserved.<br/><br/>
@@ -43,7 +80,7 @@ copyright: |
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: /
       lang: en
     - name: Portuguese (Brazilian)
       link: /pt-BR/
