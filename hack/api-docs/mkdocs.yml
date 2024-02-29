@@ -24,12 +24,30 @@ plugins:
       lang: en
   - macros:
       include_dir: docs/snippets
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: pt-BR
+          fallback_to_default: true
+          name: Portuguese (Brazilian)
+          build: true
 copyright: |
   &copy; 2024 The external-secrets Authors.<br/>
   &copy; 2024 The Linux Foundation. All rights reserved.<br/><br/>
   The Linux Foundation has registered trademarks and uses trademarks.<br/>
   For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage page</a>.
 extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Portuguese (Brazilian)
+      link: /pt-BR/
+      lang: pt-BR
   version:
     provider: mike
   analytics:
