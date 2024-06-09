@@ -12,7 +12,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-//nolint:revive
 package register
 
 // packages imported here are registered to the controller schema.
@@ -27,13 +26,17 @@ import (
 	_ "github.com/external-secrets/external-secrets/pkg/provider/delinea"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/doppler"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/fake"
+	_ "github.com/external-secrets/external-secrets/pkg/provider/fortanix"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/gcp/secretmanager"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/gitlab"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/ibm"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/keepersecurity"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/kubernetes"
+	_ "github.com/external-secrets/external-secrets/pkg/provider/onboardbase"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/onepassword"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/oracle"
+	_ "github.com/external-secrets/external-secrets/pkg/provider/passbolt"
+	_ "github.com/external-secrets/external-secrets/pkg/provider/passworddepot"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/pulumi"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/scaleway"
 	_ "github.com/external-secrets/external-secrets/pkg/provider/senhasegura"

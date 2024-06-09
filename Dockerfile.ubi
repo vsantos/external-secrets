@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal@sha256:6825946f10e8c81586fa7815c4f06016af05cfc231d921ec9699402a6655d201
+FROM registry.access.redhat.com/ubi8/ubi-minimal@sha256:9e458f41ff8868ceae00608a6fff35b45fd8bbe967bf8655e5ab08da5964f4d0
 ARG TARGETOS
 ARG TARGETARCH
 COPY bin/external-secrets-${TARGETOS}-${TARGETARCH} /bin/external-secrets

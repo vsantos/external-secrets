@@ -61,6 +61,10 @@ func (c *client) PushSecret(_ context.Context, _ *corev1.Secret, _ esv1beta1.Pus
 	return errors.New(errPushSecretsNotSupported)
 }
 
+func (c *client) SecretExists(_ context.Context, _ esv1beta1.PushSecretRemoteRef) (bool, error) {
+	return false, errors.New(errPushSecretsNotSupported)
+}
+
 func (c *client) DeleteSecret(_ context.Context, _ esv1beta1.PushSecretRemoteRef) error {
 	return errors.New(errDeleteSecretsNotSupported)
 }
@@ -75,7 +79,7 @@ func (c *client) GetSecretMap(ctx context.Context, ref esv1beta1.ExternalSecretD
 		return nil, fmt.Errorf(errGettingSecrets, ref.Key, err)
 	}
 
-	kv := make(map[string]json.RawMessage)
+	kv := make(map[string]any)
 	err = json.Unmarshal(data, &kv)
 	if err != nil {
 		return nil, fmt.Errorf(errUnmarshalSecret, err)

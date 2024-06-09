@@ -12,6 +12,8 @@ theme:
     - navigation.indexes
     - navigation.expand
   custom_dir: ../../overrides
+  logo: pictures/eso-round-logo.svg
+  favicon: pictures/eso-round-logo.svg
 markdown_extensions:
   - attr_list
   - pymdownx.highlight
@@ -115,6 +117,7 @@ nav:
       - Password: api/generator/password.md
       - Fake: api/generator/fake.md
       - Webhook: api/generator/webhook.md
+      - Github: api/generator/github.md
     - Reference Docs:
       - API specification: api/spec.md
       - Controller Options: api/controller-options.md
@@ -126,8 +129,8 @@ nav:
       - Find Secrets by Name or Metadata: guides/getallsecrets.md
       - Rewriting Keys: guides/datafrom-rewrite.md
       - Advanced Templating:
-          v2: guides/templating.md
-          v1: guides/templating-v1.md
+        - v2: guides/templating.md
+        - v1: guides/templating-v1.md
       - Kubernetes Secret Types: guides/common-k8s-secret-types.md
       - "Lifecycle: ownership & deletion": guides/ownership-deletion-policy.md
       - Decoding Strategies: guides/decoding-strategy.md
@@ -166,7 +169,11 @@ nav:
     - Cloak End 2 End Encrypted Secrets: provider/cloak.md
     - Scaleway: provider/scaleway.md
     - Delinea: provider/delinea.md
+    - Passbolt: provider/passbolt.md
     - Pulumi ESC: provider/pulumi.md
+    - Onboardbase: provider/onboardbase.md
+    - Password Depot: provider-passworddepot.md
+    - Fortanix: provider/fortanix.md
   - Examples:
     - FluxCD: examples/gitops-using-fluxcd.md
     - Anchore Engine: examples/anchore-engine-credentials.md
@@ -183,3 +190,5 @@ nav:
       - Talks: eso-talks.md
       - Demos: eso-demos.md
       - Blogs: eso-blogs.md
+  - References:
+    - API specification: spec.md

@@ -5,7 +5,7 @@ SHELL         := /bin/bash
 MAKEFLAGS     += --warn-undefined-variables
 .SHELLFLAGS   := -euo pipefail -c
 
-ARCH ?= amd64 arm64
+ARCH ?= amd64 arm64 ppc64le
 BUILD_ARGS ?= CGO_ENABLED=0
 DOCKER_BUILD_ARGS ?=
 DOCKERFILE ?= Dockerfile
@@ -321,8 +321,8 @@ ENVTEST ?= $(LOCALBIN)/setup-envtest
 GOLANGCI_LINT ?= $(LOCALBIN)/golangci-lint
 
 ## Tool Versions
-GOLANGCI_VERSION := 1.54.2
-KUBERNETES_VERSION := 1.28.x
+GOLANGCI_VERSION := 1.57.2
+KUBERNETES_VERSION := 1.30.x
 TILT_VERSION := 0.33.10
 
 .PHONY: envtest

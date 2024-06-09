@@ -17,10 +17,12 @@ package template
 import (
 	"bytes"
 	"crypto/x509"
+	"encoding/base64"
 	"encoding/pem"
 	"fmt"
 
 	"golang.org/x/crypto/pkcs12"
+	gopkcs12 "software.sslmate.com/src/go-pkcs12"
 )
 
 func pkcs12keyPass(pass, input string) (string, error) {
@@ -56,7 +58,7 @@ func pkcs12keyPass(pass, input string) (string, error) {
 	return string(pemData), nil
 }
 
-func parsePrivateKey(block []byte) (interface{}, error) {
+func parsePrivateKey(block []byte) (any, error) {
 	if k, err := x509.ParsePKCS1PrivateKey(block); err == nil {
 		return k, nil
 	}
@@ -107,4 +109,62 @@ func pkcs12certPass(pass, input string) (string, error) {
 
 func pkcs12cert(input string) (string, error) {
 	return pkcs12certPass("", input)
+}
+
+func pemToPkcs12(cert, key string) (string, error) {
+	return pemToPkcs12Pass(cert, key, "")
+}
+
+func pemToPkcs12Pass(cert, key, pass string) (string, error) {
+	certPem, _ := pem.Decode([]byte(cert))
+
+	parsedCert, err := x509.ParseCertificate(certPem.Bytes)
+	if err != nil {
+		return "", err
+	}
+
+	return certsToPkcs12(parsedCert, key, nil, pass)
+}
+
+func fullPemToPkcs12(cert, key string) (string, error) {
+	return fullPemToPkcs12Pass(cert, key, "")
+}
+
+func fullPemToPkcs12Pass(cert, key, pass string) (string, error) {
+	certPem, rest := pem.Decode([]byte(cert))
+
+	parsedCert, err := x509.ParseCertificate(certPem.Bytes)
+	if err != nil {
+		return "", err
+	}
+
+	caCerts := make([]*x509.Certificate, 0)
+	for len(rest) > 0 {
+		caPem, restBytes := pem.Decode(rest)
+		rest = restBytes
+
+		caCert, err := x509.ParseCertificate(caPem.Bytes)
+		if err != nil {
+			return "", err
+		}
+
+		caCerts = append(caCerts, caCert)
+	}
+
+	return certsToPkcs12(parsedCert, key, caCerts, pass)
+}
+
+func certsToPkcs12(cert *x509.Certificate, key string, caCerts []*x509.Certificate, password string) (string, error) {
+	keyPem, _ := pem.Decode([]byte(key))
+	parsedKey, err := parsePrivateKey(keyPem.Bytes)
+	if err != nil {
+		return "", err
+	}
+
+	pfx, err := gopkcs12.Modern.Encode(parsedKey, cert, caCerts, password)
+	if err != nil {
+		return "", err
+	}
+
+	return base64.StdEncoding.EncodeToString(pfx), nil
 }
