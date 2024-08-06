@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../chef/">
+        <link rel="prev" href="../azure-key-vault/">
       
       
-        <link rel="next" href="../device42/">
+        <link rel="next" href="../chef/">
       
       
       <link rel="icon" href="../../pictures/eso-round-logo.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>CyberArk Conjur - External Secrets Operator</title>
+        <title>Bitwarden Secrets Manager - External Secrets Operator</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#conjur-provider" class="md-skip">
+        <a href="#bitwarden-secrets-manager-provider" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CyberArk Conjur
+              Bitwarden Secrets Manager
             
           </span>
         </div>
@@ -1977,10 +1977,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../bitwarden-secrets-manager/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bitwarden Secrets Manager
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1989,6 +2007,129 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bitwarden-secrets-manager-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden Secrets Manager Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bitwarden Secrets Manager Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bitwarden-sdk-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwarden SDK server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bitwarden SDK server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-secret-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      External secret store
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Secrets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-by-uuid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by UUID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-by-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find by Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-secret" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push Secret
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2019,28 +2160,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    CyberArk Conjur
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../conjur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2049,207 +2172,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#conjur-provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conjur Provider
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conjur Provider">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conjur-server-certificate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conjur server certificate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#external-secret-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      External secret store
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="External secret store">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-external-secret-store-with-apikey-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 1: External secret store with apiKey authentication
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 1: External secret store with apiKey authentication">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-define-an-external-secret-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Define an external secret store
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-kubernetes-secrets-for-conjur-credentials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create Kubernetes secrets for Conjur credentials
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-create-the-external-secrets-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Create the external secrets store
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-2-external-secret-store-with-jwt-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Option 2: External secret store with JWT authentication
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2: External secret store with JWT authentication">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-define-an-external-secret-store_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Define an external secret store
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-the-external-secrets-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create the external secrets store
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#define-an-external-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Define an external secret
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Define an external secret">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#find-by-name-and-find-by-tag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Find by Name and Find by Tag
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-the-external-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create the external secret
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-the-k8s-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get the K8s secret
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      See also
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3404,13 +3326,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conjur-provider" class="md-nav__link">
+  <a href="#bitwarden-secrets-manager-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Conjur Provider
+      Bitwarden Secrets Manager Provider
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Conjur Provider">
+    <nav class="md-nav" aria-label="Bitwarden Secrets Manager Provider">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3420,14 +3342,35 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#conjur-server-certificate" class="md-nav__link">
+  <a href="#bitwarden-sdk-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Conjur server certificate
+      Bitwarden SDK server
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Bitwarden SDK server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3438,41 +3381,31 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="External secret store">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#option-1-external-secret-store-with-apikey-authentication" class="md-nav__link">
+  <a href="#external-secrets" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 1: External secret store with apiKey authentication
+      External Secrets
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Option 1: External secret store with apiKey authentication">
+    <nav class="md-nav" aria-label="External Secrets">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-define-an-external-secret-store" class="md-nav__link">
+  <a href="#find-by-uuid" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Define an external secret store
+      Find by UUID
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-create-kubernetes-secrets-for-conjur-credentials" class="md-nav__link">
+  <a href="#find-by-name" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Create Kubernetes secrets for Conjur credentials
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-create-the-external-secrets-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Create the external secrets store
+      Find by Name
     </span>
   </a>
   
@@ -3484,98 +3417,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#option-2-external-secret-store-with-jwt-authentication" class="md-nav__link">
+  <a href="#push-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Option 2: External secret store with JWT authentication
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Option 2: External secret store with JWT authentication">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-define-an-external-secret-store_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Define an external secret store
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-create-the-external-secrets-store" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Create the external secrets store
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#define-an-external-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Define an external secret
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Define an external secret">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#find-by-name-and-find-by-tag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Find by Name and Find by Tag
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-the-external-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create the external secret
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-the-k8s-secret" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get the K8s secret
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      See also
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License
+      Push Secret
     </span>
   </a>
   
@@ -3604,274 +3448,134 @@
   
 
 
-  <h1>CyberArk Conjur</h1>
+  <h1>Bitwarden Secrets Manager</h1>
 
-<h2 id="conjur-provider">Conjur Provider</h2>
-<p>This section describes how to set up the Conjur provider for External Secrets Operator (ESO). For a working example, see the <a href="https://github.com/conjurdemos/Accelerator-K8s-External-Secrets">Accelerator-K8s-External-Secrets repo</a>.</p>
+<h2 id="bitwarden-secrets-manager-provider">Bitwarden Secrets Manager Provider</h2>
+<p>This section describes how to set up the Bitwarden Secrets Manager provider for External Secrets Operator (ESO).</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>Before installing the Conjur provider, you need:</p>
-<ul>
-<li>A running Conjur Server, with:</li>
-<li>An accessible Conjur endpoint (for example: <code>https://myapi.example.com</code>).</li>
-<li>Your configured Conjur authentication info (such as <code>hostid</code>, <code>apikey</code>, or JWT service ID). For more information on configuring Conjur, see <a href="https://docs.cyberark.com/conjur-open-source/Latest/en/Content/Operations/Policy/policy-statement-ref.htm">Policy statement reference</a>.</li>
-<li>Support for your authentication method (<code>apikey</code> is supported by default, <code>jwt</code> requires additional configuration).</li>
-<li><strong>Optional</strong>: Conjur server certificate (see <a href="#conjur-server-certificate">below</a>).</li>
-<li>A Kubernetes cluster with ESO installed.</li>
-</ul>
-<h3 id="conjur-server-certificate">Conjur server certificate</h3>
-<p>If you set up your Conjur server with a self-signed certificate, we recommend that you populate the <code>caBundle</code> field with the Conjur self-signed certificate in the secret-store definition. The certificate CA must be referenced in the secret-store definition using either <code>caBundle</code> or <code>caProvider</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">....</span>
-<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="p p-Indicator">:</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">conjur</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Service URL</span>
-<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://myapi.conjur.org</span>
-
-<span class="w">      </span><span class="c1"># [OPTIONAL] base64 encoded string of certificate</span>
-<span class="w">      </span><span class="nt">caBundle</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;base64</span><span class="nv"> </span><span class="s">encoded</span><span class="nv"> </span><span class="s">cabundle&gt;&quot;</span>
-
-<span class="w">      </span><span class="c1"># [OPTIONAL] caProvider:</span>
-<span class="w">      </span><span class="c1"># Instead of caBundle you can also specify a caProvider,</span>
-<span class="w">      </span><span class="c1"># which retrieves the cert from a Secret or ConfigMap</span>
-<span class="w">      </span><span class="nt">caProvider</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Secret&quot;</span><span class="w"> </span><span class="c1"># Can be Secret or ConfigMap</span>
-<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">secret</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">configmap&gt;&quot;</span>
-<span class="w">        </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;key</span><span class="nv"> </span><span class="s">inside</span><span class="nv"> </span><span class="s">secret</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">configmap&gt;&quot;</span>
-<span class="w">        </span><span class="c1"># namespace is required for ClusterSecretStore</span>
-<span class="w">        </span><span class="c1"># but not relevant for SecretStore</span>
-<span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-cert-secret-namespace&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">....</span>
+<p>In order for the bitwarden provider to work, we need a second service. This service is the <a href="https://github.com/external-secrets/bitwarden-sdk-server">Bitwarden SDK Server</a>.
+The Bitwarden SDK is Rust based and requires CGO enabled. In order to not restrict the capabilities of ESO, and the image
+size ( the bitwarden Rust SDK libraries are over 150MB in size ) it has been decided to create a soft wrapper
+around the SDK that runs as a separate service providing ESO with a light REST API to pull secrets through.</p>
+<h4 id="bitwarden-sdk-server">Bitwarden SDK server</h4>
+<p>The server itself can be installed together with ESO. The ESO Helm Chart packages this service as a dependency.
+The Bitwarden SDK Server's full name is hardcoded to bitwarden-sdk-server. This is so that the exposed service URL
+gets a determinable endpoint.</p>
+<p>In order to install the service install ESO with the following helm directive:</p>
+<div class="highlight"><pre><span></span><code>helm install external-secrets \
+   external-secrets/external-secrets \
+    -n external-secrets \
+    --create-namespace \
+    --set bitwarden-sdk-server.enabled=true
 </code></pre></div>
+<h5 id="certificate">Certificate</h5>
+<p>The Bitwarden SDK Server <em>NEEDS</em> to run as an HTTPS service. That means that any installation that wants to communicate with the Bitwarden
+provider will need to generate a certificate. The best approach for that is to use cert-manager. It's easy to set up
+and can generate a certificate that the store can use to connect with the server.</p>
+<p>For a sample set up look at the bitwarden sdk server's test setup. It contains a self-signed certificate issuer for
+cert-manager.</p>
 <h3 id="external-secret-store">External secret store</h3>
-<p>The Conjur provider is configured as an external secret store in ESO. The Conjur provider supports these two methods to authenticate to Conjur:</p>
-<ul>
-<li><a href="#option-1-external-secret-store-with-apikey-authentication"><code>apikey</code></a>: uses a Conjur <code>hostid</code> and <code>apikey</code> to authenticate with Conjur</li>
-<li><a href="#option-2-external-secret-store-with-jwt-authentication"><code>jwt</code></a>: uses a JWT to authenticate with Conjur</li>
-</ul>
-<h4 id="option-1-external-secret-store-with-apikey-authentication">Option 1: External secret store with apiKey authentication</h4>
-<p>This method uses a Conjur <code>hostid</code> and <code>apikey</code> to authenticate with Conjur. It is the simplest method to set up and use because your Conjur instance requires no additional configuration.</p>
-<h5 id="step-1-define-an-external-secret-store">Step 1: Define an external secret store</h5>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Save as the file as: <code>conjur-secret-store.yaml</code></p>
-</div>
+<p>With that out of the way, let's take a look at how a secret store would look like.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden-secretsmanager</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">conjur</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Service URL</span>
-<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://myapi.conjur.org</span>
-<span class="w">      </span><span class="c1"># [OPTIONAL] base64 encoded string of certificate</span>
-<span class="w">      </span><span class="nt">caBundle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPTIONALxFIELDxxxBase64xCertxString==</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">bitwardensecretsmanager</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">apiURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://vault.bitwarden.com</span>
+<span class="w">      </span><span class="nt">identityURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://identity.bitwarden.com</span>
 <span class="w">      </span><span class="nt">auth</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">apikey</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># conjur account</span>
-<span class="w">          </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
-<span class="w">          </span><span class="nt">userRef</span><span class="p">:</span><span class="w"> </span><span class="c1"># Get this from K8S secret</span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur-creds</span>
-<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostid</span>
-<span class="w">          </span><span class="nt">apiKeyRef</span><span class="p">:</span><span class="w"> </span><span class="c1"># Get this from K8S secret</span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur-creds</span>
-<span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apikey</span>
-</code></pre></div>
-<h5 id="step-2-create-kubernetes-secrets-for-conjur-credentials">Step 2: Create Kubernetes secrets for Conjur credentials</h5>
-<p>To connect to the Conjur server, the <strong>ESO Conjur provider</strong> needs to retrieve the <code>apikey</code> credentials from K8s secrets.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For more information about how to create K8s secrets, see <a href="https://kubernetes.io/docs/concepts/configuration/secret/#creating-a-secret">Creating a secret</a>.</p>
-</div>
-<p>Here is an example of how to create K8s secrets using the <code>kubectl</code> command:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># This is all one line</span>
-kubectl<span class="w"> </span>-n<span class="w"> </span>external-secrets<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>conjur-creds<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">hostid</span><span class="o">=</span>MYCONJURHOSTID<span class="w"> </span>--from-literal<span class="o">=</span><span class="nv">apikey</span><span class="o">=</span>MYAPIKEY
-
-<span class="c1"># Example:</span>
-<span class="c1"># kubectl -n external-secrets create secret generic conjur-creds --from-literal=hostid=host/data/app1/host001 --from-literal=apikey=321blahblah</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>conjur-creds</code> is the <code>name</code> defined in the <code>userRef</code> and <code>apikeyRef</code> fields of the <code>conjur-secret-store.yml</code> file.</p>
-</div>
-<h5 id="step-3-create-the-external-secrets-store">Step 3: Create the external secrets store</h5>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Unless you are using a <a href="../../api/clustersecretstore/">ClusterSecretStore</a>, credentials must reside in the same namespace as the SecretStore.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="c1"># WARNING: creates the store in the &quot;external-secrets&quot; namespace, update the value as needed</span>
-<span class="c1">#</span>
-kubectl<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>external-secrets<span class="w"> </span>-f<span class="w"> </span>conjur-secret-store.yaml
-
-<span class="c1"># WARNING: running the delete command will delete the secret store configuration</span>
-<span class="c1">#</span>
-<span class="c1"># If there is a need to delete the external secretstore</span>
-<span class="c1"># kubectl delete secretstore -n external-secrets conjur</span>
-</code></pre></div>
-<h4 id="option-2-external-secret-store-with-jwt-authentication">Option 2: External secret store with JWT authentication</h4>
-<p>This method uses JWT tokens to authenticate with Conjur. You can use the following methods to retrieve a JWT token for authentication:</p>
-<ul>
-<li>JWT token from a referenced Kubernetes service account</li>
-<li>JWT token stored in a Kubernetes secret</li>
-</ul>
-<h5 id="step-1-define-an-external-secret-store_1">Step 1: Define an external secret store</h5>
-<p>When you use JWT authentication, the following must be specified in the <code>SecretStore</code>:</p>
-<ul>
-<li><code>account</code> -  The name of the Conjur account</li>
-<li><code>serviceId</code> - The ID of the JWT Authenticator <code>WebService</code> configured in Conjur that is used to authenticate the JWT token</li>
-</ul>
-<p>You can retrieve the JWT token from either a referenced service account or a Kubernetes secret.</p>
-<p>For example, to retrieve a JWT token from a referenced Kubernetes service account, the following secret store definition can be used:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">conjur</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Service URL</span>
-<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://myapi.conjur.org</span>
-<span class="w">      </span><span class="c1"># [OPTIONAL] base64 encoded string of certificate</span>
-<span class="w">      </span><span class="nt">caBundle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPTIONALxFIELDxxxBase64xCertxString==</span>
-<span class="w">      </span><span class="nt">auth</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">jwt</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># conjur account</span>
-<span class="w">          </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
-<span class="w">          </span><span class="c1"># The authn-jwt service ID</span>
-<span class="w">          </span><span class="nt">serviceID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-jwt-auth-service</span>
-<span class="w">          </span><span class="c1"># Service account to retrieve JWT token for</span>
-<span class="w">          </span><span class="nt">serviceAccountRef</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-service-account</span>
-<span class="w">            </span><span class="c1"># [OPTIONAL] audiences to include in JWT token</span>
-<span class="w">            </span><span class="nt">audiences</span><span class="p">:</span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://conjur.company.com</span>
-</code></pre></div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>This method is only supported in Kubernetes 1.22 and above as it uses the <a href="https://kubernetes.io/docs/reference/kubernetes-api/authentication-resources/token-request-v1/">TokenRequest API</a> to get the JWT token from the referenced service account. Audiences can be defined in the <a href="https://docs.conjur.org/Latest/en/Content/Integrations/k8s-ocp/k8s-jwt-authn.htm">Conjur JWT authenticator</a>.</p>
-</div>
-<p>Alternatively, here is an example where a secret containing a valid JWT token is referenced:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">conjur</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Service URL</span>
-<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://myapi.conjur.org</span>
-<span class="w">      </span><span class="c1"># [OPTIONAL] base64 encoded string of certificate</span>
-<span class="w">      </span><span class="nt">caBundle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPTIONALxFIELDxxxBase64xCertxString==</span>
-<span class="w">      </span><span class="nt">auth</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">jwt</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># conjur account</span>
-<span class="w">          </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
-<span class="w">          </span><span class="c1"># The authn-jwt service ID</span>
-<span class="w">          </span><span class="nt">serviceID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-jwt-auth-service</span>
-<span class="w">          </span><span class="c1"># Secret containing a valid JWT token</span>
-<span class="w">          </span><span class="nt">secretRef</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-jwt-secret</span>
+<span class="w">        </span><span class="nt">secretRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">credentials</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">token</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden-access-token</span>
+<span class="w">      </span><span class="nt">bitwardenServerSDKURL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://bitwarden-sdk-server.default.svc.cluster.local:9998</span>
+<span class="w">      </span><span class="nt">caBundle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQ5akNDQXQ2Z0F3SUJBZ0lRS08vM1J1dXR4YWdOeThCdUcyUTJYREFOQmdrcWhraUc5dzBCQVFzRkFEQkQKTVJ3d0dnWURWUVFLRXhObGVIUmxjbTVoYkMxelpXTnlaWFJ6TG1sdk1TTXdJUVlEVlFRREV4cGpaWEowTFcxaApibUZuWlhJdFltbDBkMkZ5WkdWdUxYUnNjekFlRncweU5EQTJNVGt4TXpJd01EUmFGdzB5TkRBNU1UY3hNekl3Ck1EUmFNRU14SERBYUJnTlZCQW9URTJWNGRHVnlibUZzTFhObFkzSmxkSE11YVc4eEl6QWhCZ05WQkFNVEdtTmwKY25RdGJXRnVZV2RsY2kxaWFYUjNZWEprWlc0dGRHeHpNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QQpNSUlCQ2dLQ0FRRUExdlFxaTNCL0NVU01FaUx1b3NkTVdZV25QcWJmQ20xbnZsMWhoUWxjOW1ocDFnSmxDbndjCmE0MmxuTkx0TjNTUmdrZWFNYXppV1RyaDQ5SGdUeTNVQ2xoNDh5RXFvTmJDRUlaL2xxOHNoVzRMd2g0RTdNT08KOVJJMDY2a3JCYllYakZuam1ETjdJV1NLOVVwZjIrOUpLTi9PM3ZWTktLMGZhOERxRkppL3h3VUsyOGRNc05tZAo2NnkreW52TzRFRU51Wm9IRUFieWdrOTQ2cm9yNnNmUkxHZ3ZVYXg5cmd4dEh5TkZqcGkrbjhCUDRlQkRZeGI4CkVsQy93Q0Rza2NBNFF3TXphU3NFbDBwL3gwQm9nTS9nbWJWelNVemhBL2NGdXpMRVJmV0tuanJrbmpoenNFWncKRWlzUmZ6K3MyVnUvcm5YK3pabTBoWTFvSDZYY29mVkhOUUlEQVFBQm80SGxNSUhpTUE0R0ExVWREd0VCL3dRRQpBd0lDcERBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTeUplK1lnUWZQbWFFOEZKSHowbzZ0CjQzeGh4VENCbndZRFZSMFJCSUdYTUlHVWdqOWxlSFJsY201aGJDMXpaV055WlhSekxXSnBkSGRoY21SbGJpMXoKWkdzdGMyVnlkbVZ5TG1SbFptRjFiSFF1YzNaakxtTnNkWE4wWlhJdWJHOWpZV3lDTG1KcGRIZGhjbVJsYmkxegpaR3N0YzJWeWRtVnlMbVJsWm1GMWJIUXVjM1pqTG1Oc2RYTjBaWEl1Ykc5allXeUNDV3h2WTJGc2FHOXpkSWNFCmZ3QUFBWWNRQUFBQUFBQUFBQUFBQUFBQUFBQUFBVEFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBdllYUW5ETEgKczc3N3NJN3cwN2NWMVIrTmZvbGRYblp5ejVtQVpDZkc4T2djZDRGdjRYV3lrRG94MzlkUWo0dTJnOWlVcUNwawp2QzJsbUR1UjNrS2kzbjgySTYyQ1BDN1JmZFd3M2hqaFJOV1NKbVBGeGF6NHkrbnMvMDZ3RFBlMmZwRXpPMXIzCmwxTFdZMHBySVlMME1EYTI1c3BUdlZPdWxyeWlnUnJRRGNEbS9hZ3krSEs4RHB3dWlTTEpsdFM0Q1JVa25mb3kKS00rL213VTd4RzNrSnN5ekR0T2dOZDhZeG1lRU44Q05WSk9JalltRk9OWTJrYU51S2ZnMU1aaXArcllPTEFqUgpJdUNxOFhSSTVST2gxOFJKdVlXcVZ6MUkwbXE4aVgwYlo2WG5WRjliZ0ViQ2d3bXZOWkZha3Z4RVhkWmR2N3VmCkYvRm9PTUFlNTY3L0RBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQ==</span>
+<span class="w">      </span><span class="nt">organizationID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7c0d21ec-10d9-4972-bdf8-ec52df99cc86</span>
+<span class="w">      </span><span class="nt">projectID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9c713cd6-728c-437a-a783-252b0773a0bb</span>
 </code></pre></div>
-<p>The JWT token must identify your Conjur host, be compatible with your configured Conjur JWT authenticator, and meet all the <a href="https://docs.conjur.org/Latest/en/Content/Operations/Services/cjr-authn-jwt-guidelines.htm#Best">Conjur JWT guidelines</a>.</p>
-<p>You can use an external JWT issuer or the Kubernetes API server to create the token. For example, a Kubernetes service account token can be created with this command:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>token<span class="w"> </span>my-service-account<span class="w"> </span>--audience<span class="o">=</span><span class="s1">&#39;https://conjur.company.com&#39;</span><span class="w"> </span>--duration<span class="o">=</span>3600s
-</code></pre></div>
-<p>Save the secret store file as <code>conjur-secret-store.yaml</code>.</p>
-<h5 id="step-2-create-the-external-secrets-store">Step 2: Create the external secrets store</h5>
-<div class="highlight"><pre><span></span><code><span class="c1"># WARNING: creates the store in the &quot;external-secrets&quot; namespace, update the value as needed</span>
-<span class="c1">#</span>
-kubectl<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>external-secrets<span class="w"> </span>-f<span class="w"> </span>conjur-secret-store.yaml
-
-<span class="c1"># WARNING: running the delete command will delete the secret store configuration</span>
-<span class="c1">#</span>
-<span class="c1"># If there is a need to delete the external secretstore</span>
-<span class="c1"># kubectl delete secretstore -n external-secrets conjur</span>
-</code></pre></div>
-<h3 id="define-an-external-secret">Define an external secret</h3>
-<p>After you have configured the Conjur provider secret store, you can fetch secrets from Conjur.</p>
-<p>Here is an example of how to fetch a single secret from Conjur:</p>
+<p>The api url and identity url are optional. The secret should contain the token for the Machine account for bitwarden.</p>
+<div class="admonition note inline end">
+<p class="admonition-title">Note</p>
+</div>
+<p>Make sure that the machine account has Read-Write access to the Project that the secrets are in.</p>
+<div class="admonition note inline end">
+<p class="admonition-title">Note</p>
+</div>
+<p>A secret store is organization/project dependent. Meaning a 1 store == 1 organization/project. This is so that we ensure
+that no other project's secrets can be modified accidentally <em>or</em> intentionally.</p>
+<h3 id="external-secrets">External Secrets</h3>
+<p>There are two ways to fetch secrets from the provider.</p>
+<h4 id="find-by-uuid">Find by UUID</h4>
+<p>In order to fetch a secret by using its UUID simply provide that as remote key in the external secrets like this:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
 <span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># This name must match the metadata.name in the `SecretStore`</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden-secretsmanager</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret00</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data/app1/secret00</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;339062b8-a5a1-4303-bf1d-b1920146a622&quot;</span>
 </code></pre></div>
-<p>Save the external secret file as <code>conjur-external-secret.yaml</code>.</p>
-<h4 id="find-by-name-and-find-by-tag">Find by Name and Find by Tag</h4>
-<p>The Conjur provider also supports the Find by Name and Find by Tag ESO features. This means that
-you can use a regular expression or tags to dynamically fetch multiple secrets from Conjur.</p>
+<h4 id="find-by-name">Find by Name</h4>
+<p>To find a secret using its name, we need a bit more information. Mainly, these are the rules to find a secret:</p>
+<ul>
+<li>if name is a UUID get the secret</li>
+<li>if name is NOT a UUID Property is mandatory that defines the projectID to look for</li>
+<li>if name + projectID + organizationID matches, we return that secret</li>
+<li>if more than one name exists for the same projectID within the same organization we error</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur-find-by-name</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
 <span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># This name must match the metadata.name in the `SecretStore`</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjur</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden-secretsmanager</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
-<span class="w">  </span><span class="nt">target</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">k8s-secret-to-be-created</span>
-<span class="w">  </span><span class="nt">dataFrom</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">find</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># You can use *either* `name` or `tags` to filter the secrets. Here are basic examples of both:</span>
-<span class="w">        </span><span class="nt">name</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># Match all secrets in the app1 namespace (e.g., `app1/secret00`, `app1/secret01`, etc.)</span>
-<span class="w">          </span><span class="nt">regexp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^app1</span><span class="err">\</span><span class="s">/.+$&quot;</span>
-<span class="w">        </span><span class="nt">tags</span><span class="p">:</span>
-<span class="w">          </span><span class="c1"># Only fetch Conjur secrets with the following annotations</span>
-<span class="w">          </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;prod&quot;</span>
-<span class="w">          </span><span class="nt">application</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;app1&quot;</span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;secret-name&quot;</span>
 </code></pre></div>
-<p>If you use these features, we strongly recommend that you limit the permissions of the Conjur host
-to only the secrets that it needs to access. This is more secure and it reduces the load on
-both the Conjur server and ESO.</p>
-<h3 id="create-the-external-secret">Create the external secret</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># WARNING: creates the external-secret in the &quot;external-secrets&quot; namespace, update the value as needed</span>
-<span class="c1">#</span>
-kubectl<span class="w"> </span>apply<span class="w"> </span>-n<span class="w"> </span>external-secrets<span class="w"> </span>-f<span class="w"> </span>conjur-external-secret.yaml
-
-<span class="c1"># WARNING: running the delete command will delete the external-secrets configuration</span>
-<span class="c1">#</span>
-<span class="c1"># If there is a need to delete the external secret</span>
-<span class="c1"># kubectl delete externalsecret -n external-secrets conjur</span>
-</code></pre></div>
-<h3 id="get-the-k8s-secret">Get the K8s secret</h3>
+<h3 id="push-secret">Push Secret</h3>
+<p>Pushing a secret is also implemented. Pushing a secret requires even more restrictions because Bitwarden Secrets Manager
+allows creating the same secret with the same key multiple times. In order to avoid overwriting, or potentially, returning
+the wrong secret, we restrict push secret with the following rules:</p>
 <ul>
-<li>Log in to your Conjur server and verify that your secret exists</li>
-<li>Review the value of your Kubernetes secret to verify that it contains the same value as the Conjur server</li>
+<li>name, projectID, organizationID and value AND NOTE equal, we won't push it again.</li>
+<li>name, projectID, organizationID and ONLY the value does not equal ( INCLUDING THE NOTE ) we update</li>
+<li>any of the above isn't true, we create the secret ( this means that it will create a secret in a separate project )</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># WARNING: this command will reveal the stored secret in plain text</span>
-<span class="c1">#</span>
-<span class="c1"># Assuming the secret name is &quot;secret00&quot;, this will show the value</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>-n<span class="w"> </span>external-secrets<span class="w"> </span>conjur<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.data.secret00}&quot;</span><span class="w">  </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>--decode<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PushSecret</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pushsecret-bitwarden</span><span class="w"> </span><span class="c1"># Customisable</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
+<span class="w">  </span><span class="nt">secretStoreRefs</span><span class="p">:</span><span class="w"> </span><span class="c1"># A list of secret stores to push secrets to</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bitwarden-secretsmanager</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-secret</span><span class="w"> </span><span class="c1"># Source Kubernetes secret to be pushed</span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">key</span><span class="w"> </span><span class="c1"># Source Kubernetes secret key to be pushed</span>
+<span class="w">        </span><span class="nt">remoteRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">remoteKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">remote-key-name</span><span class="w"> </span><span class="c1"># Remote reference (where the secret is going to be pushed)</span>
+<span class="w">      </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">note</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Note</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">secret</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">add.&quot;</span>
 </code></pre></div>
-<h3 id="see-also">See also</h3>
-<ul>
-<li><a href="https://github.com/conjurdemos/Accelerator-K8s-External-Secrets">Accelerator-K8s-External-Secrets repo</a></li>
-<li><a href="https://docs.cyberark.com/conjur-open-source/Latest/en/Content/Operations/Services/cjr-authn-jwt-guidelines.htm">Configure Conjur JWT authentication</a></li>
-</ul>
-<h3 id="license">License</h3>
-<p>Copyright (c) 2023-2024 CyberArk Software Ltd. All rights reserved.</p>
-<p>Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p>
 
 
 
